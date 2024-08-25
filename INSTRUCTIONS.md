@@ -1,7 +1,7 @@
 # Instructions pour Représentation Nodulaire d'un Texte Long
 
 ## Contexte
-Ces instructions sont conçues pour permettre à l'assistant ChatGPT de recréer la technique de représentation nodulaire pour des textes longs. La méthode est adaptée pour structurer visuellement des textes en utilisant des nodules connectés, avec une disposition optimisée en pentagone pour les phases principales.
+Ces instructions sont conçues pour permettre à l'assistant ChatGPT de recréer la technique de représentation nodulaire pour des textes longs. La méthode est adaptée pour structurer visuellement des textes en utilisant des nodules connectés, avec une disposition optimisée en polygone régulière pour les phases principales.
 
 ## Étapes pour Recréer la Représentation Nodulaire
 
@@ -17,8 +17,8 @@ Ces instructions sont conçues pour permettre à l'assistant ChatGPT de recréer
 - **Relier les nodules** : Utilise des arêtes pour relier les nodules principaux entre eux, en suivant l'ordre logique ou chronologique du texte.
 - **Annoter les connexions** : Ajoute des annotations aux arêtes pour indiquer la nature des relations (par exemple, "Cause", "Conséquence", "Séquence").
 
-### 4. Disposition en Pentagone
-- **Organiser les phases principales** : Disposer les phases principales en forme de pentagone pour optimiser l'espace et améliorer la lisibilité.
+### 4. Disposition en polygone régulière
+- **Organiser les phases principales** : Disposer les phases principales en forme de polygone régulière pour optimiser l'espace et améliorer la lisibilité.
 - **Positionner les sous-nodules** : Place les sous-nodules autour de leurs phases principales respectives.
 
 ### 5. Visualisation et Ajustements
@@ -48,5 +48,5 @@ pos = {phases[i]: positions[i] for i in range(len(phases))}
 plt.figure(figsize=(12, 10))
 nx.draw(G, pos, with_labels=True, node_size=3000, node_color="lightblue", font_size=10, font_weight="bold", arrowsize=20)
 nx.draw_networkx_edge_labels(G, pos, edge_labels={(u, v): d['label'] for u, v, d in G.edges(data=True)}, font_color='red')
-plt.title("Représentation Nodulaire en Pentagone")
+plt.title("Représentation Nodulaire en polygone régulière")
 plt.show()
